@@ -1,0 +1,41 @@
+{% extends  'base.html'%}
+
+{% block title %}
+Registration Successfull
+{% endblock title %}
+
+{% block style %}
+    
+    .alert-success {
+    color: #0f5132;
+    background-color: rgb(37 49 158 / 50%);
+    border-color: rgb(37 49 158 / 50%);
+}
+    .shadow-my{
+        box-shadow:  0 1rem 1rem rgba(150,12,150,.175);
+    }
+
+    .footer{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+      }
+
+{% endblock style %}
+
+{% block body %}
+
+    <div class="alert alert-success alert-dismissible fade show mx-3 my-0 shadow-my" role="alert">
+    Successfull registration
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+<dic class="container">
+<div class="social_media mx-4 my-4 ">
+    <h4><b> Note :</b> Join The Descord For Room Code and For easy Contact </h4>
+    <a href = "{{event_data.0.descord}}" ><img src="static/discord.png"  alt="descord"></a>
+</div>
+</div>
+
+
+{% endblock body %}
