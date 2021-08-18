@@ -1,0 +1,84 @@
+{% extends  'base.html'%}
+
+{% block title %}
+Registration 
+{% endblock title %}
+
+{% block body %}
+
+
+<div class= "container py-4 px-4 ">
+<form method="post" action="/registration">
+{% csrf_token %}
+  <!-- Name input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="name">Name <span class="text-danger">*</span></label>
+    <input type="text" id="name" class="form-control" name="name" placeholder="Enter Your Name" Required/>
+  </div>
+
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="player1">Your In Game id <span class="text-danger">*</span></label>
+    <input type="text" id="player1" class="form-control" name="player1" placeholder="Enter You In game id" Required/>
+  </div>
+
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="team_name">Team Name <span class="text-danger">*</span></label>
+    <input type="text" id="team_name" class="form-control" name="team_name" placeholder="Enter Your Team Name" Required/>
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="team_member">Nubmer of Team Member Including You <span class="text-danger">*</span></label>
+    <input type="number" id="team_member" class="form-control" name="team_member" placeholder="Enter The Number Of Team Members" min="1" max="4" Required/>
+  </div>
+<hr>
+  <p class="text-danger"> Enter The In game id of the Others players if any </p>
+  <div class="form-outline mb-4">
+    <label class="form-label" for="player2">Secound Player's</label>
+    <input type="text" id="player2" class="form-control" name="player2" placeholder="Enter Secound Player's In game id" />
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="player3">Third Player's</label>
+    <input type="text" id="player3" class="form-control" name="player3" placeholder="Enter Third Player's In game id" />
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="player4">Fourth Player's</label>
+    <input type="text" id="player4" class="form-control" name="player4" placeholder="Enter Fourth Player's In game id" />
+  </div>
+<hr>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="email">Email address <span class="text-danger">*</span></label>
+    <input type="email" id="email" class="form-control"  name="email" placeholder="Enter Your Email ID" Required/>
+  </div>
+
+  <!-- Whatsapp input -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="whatsapp">WhatsApp <span class="text-danger">*</span></label>
+    <input type="number" id="whatsapp" class="form-control" name="whatsapp" placeholder="Enter Your Whatsapp Number" Required/>
+  </div>
+
+  <!-- Checkbox -->
+  <div class="form-check d-flex justify-content-center mb-4">
+    <input
+      class="form-check-input me-2"
+      type="checkbox"
+      value=""
+      id="form4Example4"
+      Required
+    />
+    <label class="form-check-label" for="form4Example4" >
+      Accept T&C <span class="text-danger">*</span>
+    </label>
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+</form>
+</div>
+
+
+{%endblock body%}
